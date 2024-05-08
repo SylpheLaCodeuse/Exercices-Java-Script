@@ -3,9 +3,9 @@ const tableau = [2, 4, "jambon", 8, null, 10]
 
 function AddPairNumbers(tableau) {
     let somme = 0;
-        for(let numbers of tableau)
+        for(let numbers of tableau) {
 
-        {if (numbers % 2 === 0) {
+        if (numbers % 2 === 0) {
     somme += numbers;
             } 
         }
