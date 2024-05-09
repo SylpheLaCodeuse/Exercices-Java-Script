@@ -15,6 +15,8 @@ function executeIfArrayEmpty(array, callback) {
             if (typeof callback === 'function') {
                 //vérifie que le deuxième paramètre est une fonction
                 return callback();
+                //on aurait pû simplifier comme suit :
+                //if (Array.isArray(array)) || (array.length === 0) || (typeof callback === 'function')
             }
         }
     }
@@ -23,3 +25,4 @@ function executeIfArrayEmpty(array, callback) {
 }
 
 executeIfArrayEmpty([], testTab);
+//on aurait pu mettre executeIfArrayEmpty (stupid, testTab);
