@@ -1,24 +1,19 @@
-const chainedecaracteres = 'master des trous du cul';
+const payload = "J'adore les moules";
+const payload2 = "J'adore aussi les escaliers";
 
-function lettersoccurences(chainedecaracteres) {
-    if (typeof chainedecaracteres !== 'string') {
-        console.error('Le paramètre doit être une chaîne de caractères !');
-        return;
-    }
+function findLetterOccurences(str) {
+    const letters = {};
 
-    const object = {};
-
-    for (let i = 0; i < chainedecaracteres.length; i++) {
-        const letter = chainedecaracteres[i];
-
-        if (object[letter] === undefined) {
-            object[letter] = 1;
+    for (const value of str) {
+        if (typeof letters[value] !== 'number') {
+            letters[value] = 1;
         } else {
-            object[letter]++;
+            letters[value] = letters[value] + 1;
         }
     }
 
-    return object;
+    return letters;
 }
 
-console.log(lettersoccurences(chainedecaracteres));
+console.log(findLetterOccurences(payload));
+console.log(findLetterOccurences(payload2));

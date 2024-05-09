@@ -1,3 +1,31 @@
+## Sauvegarder sur github
+
+Ajouter tout mes fichiers a mon commit
+
+```bash
+git add .
+```
+
+Creer mon commit
+
+```bash
+git commit -m "mon message de commit"
+```
+
+Envoyer mon commit sur github
+
+```bash
+git push
+```
+
+Recuperer les mise a jour depuis github sur mon poste local
+
+```bash
+git pull
+```
+
+Toutes ces commandes doivent s'effectuer dans le dossier de mon projet.
+
 ## Configurer son editeur de code
 
 Il est possible d'assurer un code JavaScript de qualité grace aux outils tels que [Prettier](https://prettier.io/), qui format le code (espacements, points virgules ect).

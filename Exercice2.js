@@ -8,25 +8,18 @@ function testTab() {
 //ma fonction
 
 function executeIfArrayEmpty(array, callback) {
-    if (Array.isArray(array))
+    if (Array.isArray(array)) {
+        //vérifie que le tableau est bien un tableau
         if (array.length === 0) {
-            //vérifie que le tableau est bien un tableau
             // vérifie que le premier paramètre est un tableau vide
             if (typeof callback === 'function') {
                 //vérifie que le deuxième paramètre est une fonction
-                callback();
-            } else {
-                console.error("c'est pas une fonction !");
+                return callback();
             }
-            //si la fonction n'en est pas une
-        } else {
-            console.error("c'est pas vide !");
         }
-    //si le tableau n'est pas vide
-    else {
-        console.error("Ce n'est pas un tableau !");
     }
-    //si le tableau n'en est pas un
+
+    console.error("Ce n'est pas un tableau !");
 }
 
-executeIfArrayEmpty(stupid, testTab);
+executeIfArrayEmpty([], testTab);
